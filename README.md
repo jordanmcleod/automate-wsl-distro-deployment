@@ -11,6 +11,7 @@ Install and access `Ubuntu` CLI:
 1. Install `wsl`: `wsl --install`
 2. Update `wsl`: `wsl --update`
 3. Install `Ubuntu`: `wsl --install -d Ubuntu`
+   - If `An error occurred during installation. Distribution Name: 'Ubuntu' Error Code: 0x80072eff` is encountered, `Win + R > wsreset.exe` and re-run installation command; additional troubleshooting for [0x80072eff](https://docs.microsoft.com/en-us/answers/questions/116772/error-code-0x80072eff-on-windows-updates.html)
 4. Access `Ubuntu`: `wsl --distributionName Ubuntu --user userName`
 
 
@@ -85,7 +86,7 @@ To restore this backup of the distribution:
 Start WSL2 when Windows starts
 
 
-1. [[How to Run WSL2 at Startup on Windows|https://medium.com/swlh/how-to-run-ubuntu-in-wsl2-at-startup-on-windows-10-c4567d6c48f1]]
+1. [How to Run WSL2 at Startup on Windows](https://medium.com/swlh/how-to-run-ubuntu-in-wsl2-at-startup-on-windows-10-c4567d6c48f1)
 
 
 ---
@@ -104,5 +105,15 @@ Start WSL2 when Windows starts
 # Wishlist:
 
 
-- resolve `usbipd` passthrough issue with Windows 10
+- resolve [usbipd](https://github.com/dorssel/usbipd-win) passthrough issue with Windows 10
   - include in automation if resolved
+
+
+---
+
+
+# Acknowledgements and references
+
+
+- WSL reference: [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
+- The post by [Muhammad Ridwan Hakin • Apr 30 '20 • Edited on Jun 6 in "Linux on Windows: WSL with Desktop Environment via RDP"](https://dev.to/darksmile92/linux-on-windows-wsl-with-desktop-environment-via-rdp-522g) was extremely helpful to configure `Xubuntu` for `xrdp`.
