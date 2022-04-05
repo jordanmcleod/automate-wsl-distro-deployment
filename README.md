@@ -8,11 +8,12 @@ Eventually seeks to automate installation of WSL2 for xrdp connectivity to Xubun
 Install and access `Ubuntu` CLI:
 
 
-1. Install `wsl`: `wsl --install`
-2. Update `wsl`: `wsl --update`
-3. Install `Ubuntu`: `wsl --install -d Ubuntu`
+1. Open admin-level CMD or PS.
+2. Install `wsl`: `wsl --install`
+3. Update `wsl`: `wsl --update`
+4. Install `Ubuntu`: `wsl --install -d Ubuntu`
    - If `An error occurred during installation. Distribution Name: 'Ubuntu' Error Code: 0x80072eff` is encountered, `Win + R > wsreset.exe` and re-run installation command; additional troubleshooting for [0x80072eff](https://docs.microsoft.com/en-us/answers/questions/116772/error-code-0x80072eff-on-windows-updates.html)
-4. Access `Ubuntu`: `wsl --distributionName Ubuntu --user userName`
+5. Access `Ubuntu`: `wsl --distributionName Ubuntu --user userName`
 
 
 Install and configure `xfce` and `xrdp`:
