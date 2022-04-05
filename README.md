@@ -32,14 +32,14 @@ Configure `xrdp` on `xcfe`:
 4. `sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini`
 5. `echo xfce4-session > ~/.xsession`
 6. Modify `/etc/xrdp/startwm.sh`
-6.* to comment-out
-6.** `#test -x /etc/X11/Xsession && exec /etc/X11/Xsession`
-6.** `#exec /bin/sh /etc/X11/Xsession`
-6.* and append these lines to the end of the file:
-6.** `# xfce`
-6.** `startxfce4`
-6.1 `sudo sed -i 's:test -x /etc/X11/Xsession \&\& exec /etc/X11/Xsession:#test -x /etc/X11/Xsession \&\& exec /etc/X11/Xsession:g' /etc/xrdp/startvm.sh`
-6.2 `sudo sed -i 's:exec /bin/sh /etc/X11/Xsession:#exec /bin/sh /etc/X11/Xsession\n# xfce\nstartxfce4:g' /etc/xrdp/startwm.sh`
+   - to comment-out
+     - `#test -x /etc/X11/Xsession && exec /etc/X11/Xsession`
+     - `#exec /bin/sh /etc/X11/Xsession`
+   - and append these lines to the end of the file:
+     - `# xfce`
+     - `startxfce4`
+   1. `sudo sed -i 's:test -x /etc/X11/Xsession \&\& exec /etc/X11/Xsession:#test -x /etc/X11/Xsession \&\& exec /etc/X11/Xsession:g' /etc/xrdp/startvm.sh`
+   2. `sudo sed -i 's:exec /bin/sh /etc/X11/Xsession:#exec /bin/sh /etc/X11/Xsession\n# xfce\nstartxfce4:g' /etc/xrdp/startwm.sh`
 
 
 Start the `xrdp` service:
@@ -64,16 +64,16 @@ Backup the distribution:
 
 
 1. In the Window OS admin-level CLI, execute `wsl --export <distro> <filename.tar>`
-1.* e.g., `wsl --export Ubuntu C:\projects\Ubuntu-wsl2-usbip.tar`
+   - e.g., `wsl --export Ubuntu C:\projects\Ubuntu-wsl2-usbip.tar`
 
 
 To restore this backup of the distribution:
 
 
 1. In the Windows OS admin-level CLI, execute `wsl --unregister <distro>` to remove the problem distribution.
-1.* e.g., `wsl --unregister wsl2-usbip`
+   - e.g., `wsl --unregister wsl2-usbip`
 2. In the Windows OS admin-level CLI, execute `wsl --import <distro> <install location> <filename>`
-2.* e.g., `wsl --import wsl2-usbip C:\projects\wsl-dist C:\projects\Ubuntu-wsl2-usbip.tar`
+   - e.g., `wsl --import wsl2-usbip C:\projects\wsl-dist C:\projects\Ubuntu-wsl2-usbip.tar`
 
 
 ---
@@ -96,13 +96,13 @@ Start WSL2 when Windows starts
 
 1. implement installation of `wsl` and `Windows Terminal` using `Chocolatey`
 2. implement automated configuration of this entire process using Ansible
-2.* Windows
-2.* Chocolatey (community? module)
-2.* Linux
+   - Windows
+   - Chocolatey (community? module)
+   - Linux
 
 
 # Wishlist:
 
 
-* resolve `usbipd` passthrough issue with Windows 10
-** include in automation if resolved
+- resolve `usbipd` passthrough issue with Windows 10
+  - include in automation if resolved
