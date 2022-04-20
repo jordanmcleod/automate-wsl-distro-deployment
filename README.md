@@ -40,7 +40,7 @@ Configure `xrdp` on `xcfe`:
    - and append these lines to the end of the file:
      - `# xfce`
      - `startxfce4`
-   1. `sudo sed -i 's:test -x /etc/X11/Xsession \&\& exec /etc/X11/Xsession:#test -x /etc/X11/Xsession \&\& exec /etc/X11/Xsession:g' /etc/xrdp/startvm.sh`
+   1. `sudo sed -i 's:test -x /etc/X11/Xsession \&\& exec /etc/X11/Xsession:#test -x /etc/X11/Xsession \&\& exec /etc/X11/Xsession:g' /etc/xrdp/startwm.sh`
    2. `sudo sed -i 's:exec /bin/sh /etc/X11/Xsession:#exec /bin/sh /etc/X11/Xsession\n# xfce\nstartxfce4:g' /etc/xrdp/startwm.sh`
 
 
