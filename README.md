@@ -1,3 +1,7 @@
+# Notice:
+I will not be continuing tihs project for the foreseeable future.  I have entirely changed to various distributions of Linux for all of my systems.  Should there be a time in the future where I am required to use Windows, I would likely resume it at that time in the future.
+
+
 # automate-wsl-distro-deployment
 Eventually seeks to automate installation of WSL2 for xrdp connectivity to Xubuntu hosted on Windows 10 along with USB passthrough via usbipd as well as additional requisite configurations in Windows and the distro.
 
